@@ -1,5 +1,5 @@
 # __chihlee_pico__
-致理pico_w課程
+致理pico_w課程,第2節上課
 
 # 上課網址
 https://meet.google.com/rgg-rywi-hbw
