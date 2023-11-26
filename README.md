@@ -9,3 +9,7 @@ https://meet.google.com/rgg-rywi-hbw
 ## [2023_09_11_上午](https://youtube.com/live/d4kCf4p2T6E)
 
 ## [2023_09_11_下午](https://youtube.com/live/pVvPs_qJhNY)
+
+## [2023_09_26_上午](https://youtube.com/live/xjF-LAo4vEY)
+
+## [2023_09_26_下午](https://youtube.com/live/WtbsFRo0s5U)
