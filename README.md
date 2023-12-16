@@ -17,3 +17,7 @@ https://meet.google.com/rgg-rywi-hbw
 ## [2023_12_03_上午](https://youtube.com/live/0BnhcdTyDCU)
 
 ## [2023_12_03_下午](https://youtube.com/live/Ol4FaxD5gRA)
+
+## [2023_12_10_上午](https://youtube.com/live/1SQZFUCGzak)
+
+## [2023_12_10_下午](https://youtube.com/live/aEvrcbNypIc)
