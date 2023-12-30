@@ -61,5 +61,5 @@ def callback1(t:Timer):
     
 connect()
 time1 = Timer()
-time1.init(period=2000,callback=callback1)
+time1.init(period=10000,callback=callback1)
 
