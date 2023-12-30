@@ -4,13 +4,6 @@
 			"path": "project1"
 		},
 		{
-			"path": "project1/pico_w"
-		},
-		{
-			"name": "Pico (W) Remote Workspace",
-			"uri": "pico:"
-		},
-		{
 			"path": "project1/fastAPI"
 		},
 		{
