@@ -4,7 +4,7 @@ import requests
 import pandas
 
 #自動reload頁面每2秒
-st_autorefresh(interval=2000, limit=100, key="fizzbuzzcounter")
+st_autorefresh(interval=10000, limit=100, key="fizzbuzzcounter")
 
 #測試url
 #url = 'http://127.0.0.1:8000/items/10'

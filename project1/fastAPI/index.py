@@ -21,21 +21,17 @@ async def update_item(item:Item):
 
 @app.get("/items/{date}/{distance}/{light}")
 async def update_item1(date:str,distance:float,light:float):
-    data = {
-        'date' : date,
-        'distance':distance,
-        'light':light
-    }
+    
     renderRedis.lpush('pico_distance',distance)
     renderRedis.lpush('pico_light',light)
-    print(data)
-    return data
+    
+    return {"status":"ok"}
 
 @app.post("/items/{lastNum}")
 async def get_items(lastNum:int):
     #redis取出資料  
-    distances = renderRedis.lrange('pico_distance',lastNum * -1,-1)
-    light = renderRedis.lrange('pico_light',lastNum * -1,-1)
+    distances = renderRedis.lrange('pico_distance',0,lastNum)
+    light = renderRedis.lrange('pico_light',0,lastNum)
 
     #將byte string 轉換為 str
     distances_list = [item.decode('utf-8') for item in distances]
