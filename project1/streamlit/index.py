@@ -18,7 +18,7 @@ if response.ok:
 
 st.title('PICO_W-距離和亮度測試')
 
-st.header('高度:')
+st.header('亮度:')
 st.line_chart(data_df,y='light')
 
 st.header('距離:')
