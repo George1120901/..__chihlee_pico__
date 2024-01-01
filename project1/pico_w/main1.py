@@ -42,7 +42,11 @@ def callback1(t:Timer):
     print(light_value)
     print(date_str)
     
+    #本機執行
     url = f'http://10.170.1.42:8000/items/{date_str}/{distance}/{light_value}'
+    
+    #render端執行
+    #url = f'https://pico-w-distance-light.onrender.com/items/{date_str}/{distance}/{light_value}'
     
     
     try:        
