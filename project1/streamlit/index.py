@@ -6,8 +6,11 @@ import pandas
 #自動reload頁面每2秒
 st_autorefresh(interval=2000, limit=100, key="fizzbuzzcounter")
 
-testURL = 'http://127.0.0.1:8000/items/10'
-response = requests.post(testURL)
+#測試url
+#url = 'http://127.0.0.1:8000/items/10'
+#正式url
+url = 'https://pico-w-distance-light.onrender.com/items/10'
+response = requests.post(url)
 if response.ok:
     json_data = response.json()
     data_df = pandas.DataFrame(json_data)
