@@ -1,14 +1,19 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import redis
+from dotenv import load_dotenv
+
 
 class Item(BaseModel):
     date:str
     distance:float
     light:float
 
+import os
+
+load_dotenv() #載入.env的環境變數
 app = FastAPI()
-renderRedis = redis.Redis.from_url('rediss://red-clm0u4pfb9qs73966ia0:z8GgAGuZPDFfDdkxkrWjFyqfptcwu8gO@singapore-redis.render.com:6379')
+renderRedis = redis.Redis.from_url(os.environ.get('redis'))
 
 @app.post("/items/")
 async def update_item(item:Item):
