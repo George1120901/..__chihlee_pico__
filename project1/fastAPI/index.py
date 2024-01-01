@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 
 
 class Item(BaseModel):
-    date:str
     distance:float
     light:float
 
@@ -31,3 +30,26 @@ async def update_item1(date:str,distance:float,light:float):
     renderRedis.lpush('pico_light',light)
     print(data)
     return data
+
+@app.post("/items/{lastNum}")
+async def get_items(lastNum:int):
+    #redis取出資料  
+    distances = renderRedis.lrange('pico_distance',lastNum * -1,-1)
+    light = renderRedis.lrange('pico_light',lastNum * -1,-1)
+
+    #將byte string 轉換為 str
+    distances_list = [item.decode('utf-8') for item in distances]
+    light_list = [item.decode('utf-8') for item in light]
+
+    #建立list_time:list[Item]
+    list_item:list[Item] = []  
+    for i in range(len(distances_list)):
+        d = distances_list[i]
+        l = light_list[i]
+        #建立Pydantic實體
+        item = Item(distance=float(d), light=float(l))        
+        list_item.append(item)
+    
+    return list_item
+
+
