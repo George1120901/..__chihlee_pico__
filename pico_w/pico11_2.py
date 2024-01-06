@@ -1,41 +1,6 @@
-import network
-import time
+from tools import connect,reconnect
 from machine import WDT,Timer,ADC,RTC
-import urequests as requests
-
-
-def connect():
-    # enable station interface and connect to WiFi access point
-    nic = network.WLAN(network.STA_IF)
-    nic.active(True)
-    nic.connect('Robert_iPhone', '0926656000')
-
-    max_wait = 10
-
-    #處理正在連線
-    while max_wait > 0:
-        max_wait -= 1
-        status = nic.status()
-        if status < 0 or status >=3:
-            break
-        print("等待連線")
-        time.sleep(1)
-
-
-        
-    #沒有wifi的處理
-    if nic.status() != 3:
-        #連線失敗,重新開機
-        #wdt = WDT(timeout=2000)
-        #wdt.feed()
-        raise RuntimeError('連線失敗')
-        
-    else:
-        print("成功連線")
-        print(nic.ifconfig())
-        
-
-
+import time
 
 
 def alert(t:float):
@@ -49,8 +14,18 @@ def alert(t:float):
     minites = date_tuple[5]
     second = date_tuple[6]
     date_str = f'{year}-{month}-{day} {hour}:{minites}:{second}'
-    response = requests.get(f'https://自已的?name=pico_我家雞場&date={date_str}&temperature={t}')
-    response.close()
+    try:
+        response = requests.get('https://hook.us1.make.com/lwylhnsajcmk7kfpnog7kmb8l25894u7?name=robert&date=%E4%BB%8A%E5%A4%A9&temperature=56.987')
+    except:
+        reconnect()
+    else:
+        if response.status_code == 200:
+            print("傳送成功")
+        else:
+            print("server有錯誤訊息")
+            print(f'status_code:{response.status_code}')
+        response.close()
+    
     
 def callback1(t:Timer):
     global start
