@@ -7,8 +7,8 @@ from machine import WDT
 rp2.country('TW')
 
 
-ssid = 'Robert_iPhone'
-password = '0926656000'
+ssid = '自已id'
+password = '自已的密碼'
 
 
 
