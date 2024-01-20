@@ -25,9 +25,9 @@ def btn_detect(btn1):
             is_press = False
             try:
                 if led_status == True:
-                    get_url = 'https://blynk.cloud/external/api/update?token=您自已的&v0=1'
+                    get_url = 'https://blynk.cloud/external/api/update?token=自已的token&v0=1'
                 else:
-                    get_url = 'https://blynk.cloud/external/api/update?token=您自已的&v0=0'
+                    get_url = 'https://blynk.cloud/external/api/update?token=自已的token&v0=0'
                 response = requests.get(get_url)
             except:
                 reconnect()
