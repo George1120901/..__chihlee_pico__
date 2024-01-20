@@ -10,8 +10,6 @@ rp2.country('TW')
 ssid = '自已id'
 password = '自已的密碼'
 
-
-
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 wlan.connect(ssid, password)
