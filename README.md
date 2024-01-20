@@ -29,3 +29,5 @@ https://meet.google.com/rgg-rywi-hbw
 ## [2024_01_06_早上](https://youtube.com/live/F8bdmPqvkn8)
 
 ## [2024_01_06_下午](https://youtube.com/live/iN4Tf5mYBSc)
+
+## [2024_01_20_早上](https://youtube.com/live/w5-RQI6SJco)
