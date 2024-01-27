@@ -1,4 +1,4 @@
-from machine import Timer,Pin
+from machine import Timer,Pin,ADC
 
 
 def fun10(t:Timer | None = None):
@@ -6,6 +6,7 @@ def fun10(t:Timer | None = None):
     led.toggle()
     
 led = Pin(15, Pin.OUT)
+light = ADC(Pin(28))
 timer10 = Timer(period=10000, mode=Timer.PERIODIC, callback=fun10)
 fun10()
 
@@ -13,4 +14,4 @@ fun10()
 
 
 while True:
-    pass
+    print(light.read_u16())
