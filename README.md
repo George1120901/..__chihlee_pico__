@@ -33,3 +33,7 @@ https://meet.google.com/rgg-rywi-hbw
 ## [2024_01_20_早上](https://youtube.com/live/w5-RQI6SJco)
 
 ## [2024_01_20_下午](https://youtube.com/live/cOKGWs5K_3o)
+
+## [2024_01_26_早上](https://youtube.com/live/braPQyv3Wdo)
+
+## [2024_01_26_下午](https://youtube.com/live/DyafTsMWiUs)
